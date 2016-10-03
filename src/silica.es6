@@ -19,7 +19,7 @@ var Silica = {
   _appRoot              :  null,
   interpolationPattern  :  /\{\{(.*?)\}\}/,
   usePushState          :  true,
-  version               :  "0.8.15",
+  version               :  "0.8.16",
 
   // Set the root context
   setContext(contextName)
@@ -697,7 +697,7 @@ var Silica = {
       ctx = Silica.getContext($elm);
       action = $elm.data(act);
       action = action.match(/(\w+)/g);
-      var models;
+      var models = [];
       if (typeof action[1] !== 'undefined')
       {
         models = action.slice(1, action.length);
